@@ -1084,7 +1084,7 @@ const vm = new Vue({
 
 ## 生命周期
 
-![生命周期](F:\programma\front-end\JavaScript\Vue\learn_Vue\images\生命周期-16353485229993.png)
+![生命周期](https://github.com/EthanWhite134/learn_Vue/blob/main/images/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
 
 1. 又名：生命周期回调函数、生命周期函数、生命周期钩子。
 2. 是什么：Vue在关键时刻帮我们调用的一些特殊名称的函数。
