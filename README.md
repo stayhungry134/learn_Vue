@@ -1,5 +1,7 @@
 # Vue 基础
 
+[toc]
+
 ## 初识 Vue
 
 ### Vue 第一步
@@ -1425,8 +1427,3 @@ Student.vue 文件，一个 Vue 的组件
 	}
 </script>
 ```
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0975141bf25de43b8f3bd93bb4c26951b64cea23
