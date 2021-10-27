@@ -202,7 +202,7 @@ Vue模板语法有2大类：
 
 ## MVVM 模型
 
-![image-20211017132925124](images\image-20211017132925124.png)
+![image-20211017132925124](https://github.com/EthanWhite134/learn_Vue/blob/main/images/image-20211017132925124.png)
 
 #### MVVM 模型
 
@@ -1084,7 +1084,7 @@ const vm = new Vue({
 
 ## 生命周期
 
-![生命周期](images\生命周期.png)
+![生命周期](F:\programma\front-end\JavaScript\Vue\learn_Vue\images\生命周期-16353485229993.png)
 
 1. 又名：生命周期回调函数、生命周期函数、生命周期钩子。
 2. 是什么：Vue在关键时刻帮我们调用的一些特殊名称的函数。
