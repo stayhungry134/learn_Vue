@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初始Vue</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <p>姓名：{{ name }}</p>
+        <p>学校：{{ school }}</p>
+    </div>
+
+    <script>
+        Vue.config.productionTip = false  //阻止 Vue 在启动时生成生产提示
+
+        new Vue({
+            el:'#root',
+            data:{
+                name:'张飞',
+                school:'三国皇家学院'
+            }
+        })
+        // new Vue({
+        //     el:'#root',
+        //     data() {
+        //         return {
+        //             name: "刘备",
+        //             school: "东汉大讲堂"
+        //         }
+        //     },
+        // })
+    </script>
+</body>
+</html>

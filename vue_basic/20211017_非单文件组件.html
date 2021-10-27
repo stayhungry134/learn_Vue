@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非单文件组件</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <qin></qin>
+        <hr>
+        <zhao></zhao>
+    </div>
+
+    <script>
+        Vue.config.productionTip = false  //阻止 Vue 在启动时生成生产提示
+        
+        const qin = ({
+            template:`
+            <div>
+                <h2>秦国</h2>
+                <ul>
+                    <li>皇帝：{{ king }} </li>
+                    <li>大将军：{{ general }} 我有 {{ arms }} 个小兵</li>
+                    <button @click='add'>点击招兵买马</button>
+                    <li>太后：{{ queen }}，我有 {{ kids }} 个孩子</li>
+                    <button @click='birth'>点击生孩子</button>
+                    <li>丞相：{{ minister }}</li>
+                    <button @click.once='get'>点击篡位</button>
+                </ul>
+            </div>
+            `,
+            data() {
+                return {
+                    king:'嬴稷',
+                    general:'白起',
+                    queen:'宣太后',
+                    minister:'范雎',
+                    arms: 10000,
+                    kids:1,
+                }
+            },
+            methods: {
+                add(){
+                    this.arms += 1000;
+                },
+                birth(){
+                    this.kids += 1;
+                    console.log("太后生了一个孩子！！")
+                },
+                get(){
+                    alert("不好啦，丞相篡位啦！！！")
+                    this.king = this.minister
+                    this.minister = '没有丞相了，丞相当上皇帝了'
+                }
+            },
+        })
+
+        const zhao = ({
+            template:`
+            <div>
+                <h2>赵国</h2>
+                <ul>
+                    <li>皇帝：{{ king }} </li>
+                    <li>大将军：{{ general }}，我有 {{ arms }} 个小兵</li>
+                    <button @click='add'>点击招兵买马</button>
+                    <li>太后：{{ queen }}，我有 {{ kids }} 个孩子</li>
+                    <button @click='birth'>点击生孩子</button>
+                    <li>丞相：{{ minister }}</li>
+                    <button @click.once='get'>点击篡位</button>
+                </ul>
+            </div>
+            `,
+            data() {
+                return {
+                    king:'赵胜',
+                    general:'廉颇',
+                    queen:'赵胜他媳妇',
+                    minister:'平原君',
+                    arms: 5000,
+                    kids:1,
+                }
+            },
+            methods: {
+                add(){
+                    this.arms += 800;
+                },
+                birth(){
+                    this.kids += 1;
+                    console.log("太后生了一个孩子！！")
+                },
+                get(){
+                    alert("想篡位？你在想屁吃。\n 你已被击杀")
+                    this.minister = '丞相已经死了！'
+                }
+            },
+        })
+
+        new Vue({
+            el:'#root',
+            components:{
+                qin,
+                zhao
+            }
+        })
+    </script>
+</body>
+</html>

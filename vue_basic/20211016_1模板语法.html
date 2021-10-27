@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板语法</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>秦国</h2>
+        <ul>
+            <li>皇帝：{{ king }} <a :href="kingUrl">{{ king }}</a></li>
+            <li>大将军：{{ general }} <a :href="generalUrl">{{ general }}</a></li>
+            <li>太后：{{ queen }} <a :href="queenUrl">{{ queen }}</a></li>
+            <li>丞相：{{ minister }} <a :href="ministerUrl">{{ minister }}</a></li>
+            
+        </ul>
+    </div>
+
+    <script>
+        Vue.config.productionTip = false  //阻止 Vue 在启动时生成生产提示
+        
+        new Vue({
+            el:'#root',
+            data() {
+                return {
+                    king:'嬴稷',
+                    kingUrl:'https://zh.wikipedia.org/zh-cn/%E7%A7%A6%E6%98%AD%E8%A5%84%E7%8E%8B',
+                    general:'白起',
+                    generalUrl:'https://zh.wikipedia.org/wiki/%E7%99%BD%E8%B5%B7',
+                    queen:'宣太后',
+                    queenUrl:'https://zh.wikipedia.org/wiki/%E5%AE%A3%E5%A4%AA%E5%90%8E',
+                    minister:'范雎',
+                    ministerUrl:'https://zh.wikipedia.org/wiki/%E8%8C%83%E9%9B%8E',
+                }
+            },
+        })
+    </script>
+</body>
+</html>
